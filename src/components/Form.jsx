@@ -12,11 +12,14 @@ function Form(props) {
         type='password'
         placeholder='password'
       />
-      <Input
-        type='password'
-        placeholder='confirm password'
+      {!props.isRegistered && (
+        <Input
+          type='password'
+          placeholder='confirm password'
 
-      />
+        />
+      )}
+
 
       <button type="submit">{props.isRegistered ? "Login" : "Register"}</button>
     </form>
